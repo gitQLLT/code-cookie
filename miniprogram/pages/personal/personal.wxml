@@ -1,0 +1,2 @@
+<!--pages/personal/personal.wxml-->
+<text>{{timeline}}打工人</text>

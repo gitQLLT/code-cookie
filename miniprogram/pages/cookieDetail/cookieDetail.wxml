@@ -1,0 +1,2 @@
+<!--pages/cookieDetail/cookieDetail.wxml-->
+<rich-text nodes="{{htmlSnip}}"></rich-text>

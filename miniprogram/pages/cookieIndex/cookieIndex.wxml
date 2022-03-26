@@ -1,0 +1,26 @@
+<!--pages/cookieIndex/cookieIndex.wxml-->
+<view class="search-view">
+  <searchxx id="searchbar" binddisabledtap="bindSearchtap" disabled="{{true}}" placeholder="请输入菜肴名称：韭菜炒蛋..."></searchxx>
+</view>
+
+<view class="layout-hor">
+  <!-- 主列表 -->
+  <scroll-view scroll-y="true" class="flex-div-left" style="height:{{scrollHeight}}px;">
+    <block wx:for="{{records}}" wx:key="index">
+        <view class="vtabs-div {{index == categoryIndex ? 'vtabs-div_selected' : ''}}" hover-class='vtabs-div.selected' bindtap='bindCategoryTap' data-index="{{index}}" data-item="{{item}}">
+            <text class="vtabs-div-text">{{item.name}}</text>
+        </view>
+    </block>
+  </scroll-view>
+
+    <!-- 分类列表 -->
+    <scroll-view scroll-y="true" class="flex-div-right" style="height:{{scrollHeight}}px;">
+        <block wx:for="{{category}}" wx:key="index">
+            <view class="vtabs-content-category">
+                <view class="vtabs-content-subcategory" bindtap="handleClick" bindtouchstart="listTouch" bindtouchend="listTouchEnd" data-index="{{index}}" data-item="{{item}}">
+                    <text class="{{index == listIndex ? 'selected' : ''}}">{{item.name}}</text>
+                </view>
+            </view>
+        </block>
+    </scroll-view>
+</view>

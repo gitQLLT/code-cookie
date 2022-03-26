@@ -1,0 +1,81 @@
+page {
+  /* 全局自定义变量 */
+  /* --app-BG: #f8f8f8; */
+  --app-BG: rgba(248, 248, 248);
+  --app-PICKER-INDICATOR: rgba(248, 248, 248, .2);
+  --app-THEME-COLOR: #C2462D;
+  --app-ORANGE-COLOR: #FA6400;
+  --app-YELLOW-COLOR: #F59524;
+  --app-SHADOW-COLOR: rgba(0, 0, 0, .1);
+  --app-REFRESHER-COLOR: #fff;
+  --app-BOXDER-COLOR: #DFDEE2;
+  --app-INVALID-COLOR: #C2C3C7;
+  --app-PLACEHOLDER-COLOR: #CCC;
+  --app-TIP-COLOR: #502828;
+  --app-LINE-COLOR: rgba(0, 0, 0, .1);
+  /* --app-LINE-COLOR: rgba(240, 240, 240); */
+  --app-TEXT-COLOR: #000;
+  --app-TEXT-COLOR-INVALID: rgba(0, 0, 0, .5);
+  --app-FONT-10: 10px;
+  --app-FONT-12: 12px;
+  --app-FONT-13: 13px;
+  --app-FONT-14: 14px;
+  --app-FONT-15: 15px;
+  --app-FONT-17: 17px;
+  --app-FONT-19: 19px;
+  --app-FONT-22: 22px;
+  /* --app-TEXT-MICRO: 20rpx; 
+  --app-TEXT-SMALL: 24rpx; 
+  --app-TEXT-NORMAL: 26rpx; 
+  --app-TEXT-MIDDLE: 30rpx; 
+  --app-TEXT-BIG: 34rpx; 
+  --app-TEXT-LARGE: 38rpx; 
+  --app-TEXT-XLARGE: 42rpx;
+  --app-TEXT-HUGE: 30px;   */
+  --app-SIZE-10: 10rpx;
+  --app-SIZE-20: 20rpx;
+  --app-SIZE-24: 24rpx;
+  --app-SIZE-30: 30rpx;
+  --app-SIZE-36: 36rpx;
+  --app-SIZE-50: 50rpx;
+  --app-SIZE-100: 100rpx;
+  --app-LINE-HEIGHT: 80rpx;
+  --app-BTN-HEIGHT: 90rpx;
+  --app-FILTER-HEIGHT: 40px;
+  --app-BOTTOM-HEIGHT: 50px;
+  --app-TABBAR-HEIGHT: 40px;
+  --app-SEARCHBAR-HEIGHT: 55px;
+  --app-TABBAR-INDICATOR-WIDTH: 100rpx;
+  --app-RADIUS-20: 20rpx;
+  --app-ORDER-SQUARE: 150rpx;
+
+  /* 全局属性配置 */
+  background-color: var(--app-BG);
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-size: var(--app-FONT-13);
+  color: var(--app-TEXT-COLOR);
+}
+.search-view {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 0 10px;
+  width: 100%;
+  /* height: 110rpx; */
+  height: var(--app-SEARCHBAR-HEIGHT);
+  background-color: var(--app-BG);
+  /* opacity: 0.16;   */
+}
+
+/* 水平布局 */
+.layout-hor {
+  display: flex;
+  flex-direction: row;
+}
+/* 水平和垂直都居中 */
+.layout-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

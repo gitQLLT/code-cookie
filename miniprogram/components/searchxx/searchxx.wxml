@@ -1,0 +1,16 @@
+<!--components/searchxx.wxml-->
+<view class="search-view" bindtap="bindSearchTap">
+
+  <block wx:if="{{disabled}}">
+      <input class="input" disabled="{{disabled}}" type="{{type}}" placeholder="{{placeholder}}"
+            model:value="{{value}}" placeholder-class="placeholder"/>
+  </block>
+  <block wx:else>
+      <input class="input" type="{{type}}" placeholder="{{placeholder}}" value="{{value}}" focus="{{focus}}"
+            model:value="{{value}}" placeholder-class="placeholder"/>
+  </block>
+
+  <view class="searchbox layout-center" bindtap="bindSearch">
+    <image class="searchbox-image" src="../../images/ic_search.png"></image>
+  </view>
+</view>

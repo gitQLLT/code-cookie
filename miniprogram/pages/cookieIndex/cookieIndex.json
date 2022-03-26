@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "食神争霸",
+  "usingComponents": {
+    "searchxx": "../../components/searchxx/searchxx"
+  }
+}
