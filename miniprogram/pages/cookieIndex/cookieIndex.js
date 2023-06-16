@@ -45,6 +45,13 @@ Page({
     })
   },
 
+  bindSearchtap(event){
+    console.log(event)
+    wx.navigateTo({
+      url: '/pages/search/search',
+    })
+  },
+
   bindCategoryTap(event){
     let index = event.currentTarget.dataset.index;
     this.setData({

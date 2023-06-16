@@ -1,5 +1,4 @@
 function serve({name,data}){
-  console.log(data)
   return new Promise((resolve,reject)=>{
     wx.cloud.callFunction({
       name,

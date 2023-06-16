@@ -1,2 +1,53 @@
 <!--pages/animalIndex/animalIndex.wxml-->
-<text>pages/animalIndex/animalIndex.wxml</text>
+<view class="level-layout" bindtap="levelTap">
+  <view class="item {{showLevel==='0'?'active':''}}" data-index="0">简介</view>
+  <view class="item {{showLevel==='1'?'active':''}}" data-index="1">代表食物</view>
+</view>
+
+
+  <!-- 主列表 -->
+<view wx:if="{{showLevel==='0'}}" class="layout-hor">
+  <scroll-view scroll-y="true" class="flex-div-left" style="height:{{scrollHeight}}px;">
+    <block wx:for="{{introList}}" wx:key="index">
+        <view class="vtabs-div {{index == categoryIndex ? 'vtabs-div_selected' : ''}}" hover-class='vtabs-div.selected' bindtap='bindCategoryTap' data-index="{{index}}" data-item="{{item}}">
+            <text class="vtabs-div-text">{{item.name}}</text>
+        </view>
+    </block>
+  </scroll-view>
+
+  <scroll-view scroll-y="true" class="flex-div-right" style="height:{{scrollHeight}}px;">
+    <block wx:for="{{selectList}}" wx:key="index">
+      <view class="vtabs-content-category">
+        <view class="vtabs-content-subcategory" bindtap="handleClick" data-index="{{index}}" data-item="{{item}}">
+            <text style="{{index == listIndex ? 'opacity:0.6' : ''}}">{{item.title}}</text>
+            <i class="text-icon {{index == listIndex ? 'selected' : ''}}"></i>
+        </view>
+        <view class="vtabs-content {{index == listIndex ? 'selected' : ''}}">
+          <text class="fold-text">{{item.desc}}</text>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+</view>
+
+<view wx:else class="layout-hor">
+  <scroll-view scroll-y="true" class="flex-div-left" style="height:{{scrollHeight}}px;">
+    <block wx:for="{{repreList}}" wx:key="index">
+        <view class="vtabs-div {{index == categoryIndex1 ? 'vtabs-div_selected' : ''}}" hover-class='vtabs-div.selected' bindtap='bindCategoryDesc' data-index="{{index}}" data-item="{{item}}">
+            <text class="vtabs-div-text">{{item.title}}</text>
+        </view>
+    </block>
+  </scroll-view>
+
+  <scroll-view scroll-y="true" class="flex-div-right" style="height:{{scrollHeight}}px;">
+    <view class="vtabs-content-category1">
+        <view class="vtabs-content-subcategory1">
+          <image mode="aspectFit" src="{{selectUrl}}"></image>
+          <text>{{selectDesc}}</text>
+        </view>
+      </view>
+  </scroll-view>
+</view>
+
+
+

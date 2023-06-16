@@ -5,15 +5,25 @@ Page({
    * 页面的初始数据
    */
   data: {
-    timeline: ''
+    scrollHeight: 0,
+    timeline: '',
+    randomNum: Math.floor(Math.random()*10+1)
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    let date=new Date();
+    // 获取系统信息
+    wx.getSystemInfo({
+      success: res=> {
+          this.setData({
+              scrollHeight: res.windowHeight - 106,
+          });
+      }
+    });
 
+    let date=new Date();
 　　if(date.getHours()>=0&&date.getHours()<12){
       this.setData({
         timeline: '上午好'
@@ -29,11 +39,22 @@ Page({
 　　}
   },
 
+  addCook(){
+    wx.redirectTo({
+      url: '/pages/addCookie/addCookie',
+    })
+  },
+
+  picPuzzle(){
+    wx.redirectTo({
+      url: '/pages/picPuzzle/picPuzzle',
+    })
+  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
   },
 
   /**

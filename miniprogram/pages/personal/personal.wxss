@@ -1,1 +1,61 @@
 /* pages/personal/personal.wxss */
+.info-layout{
+  display: flex;
+  align-items: center;
+  padding: 50rpx 30rpx;
+  background-color: rgba(103,171,15);
+  background-size: 400%;
+  animation: bganimation 15s infinite;
+}
+@keyframes bganimation {
+  0%{
+    background-position: 0% 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  100%{
+    background-position: 0% 50%;
+  }
+}
+.info-layout image{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  margin-right: 30rpx;
+}
+.info-layout text{
+  font-size: var(--app-FONT-15);
+  opacity: 0.8;
+  word-break: break-all;
+}
+.layout-scroll .scroll-item{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  font-size: var(--app-FONT-13);
+  line-height: var(--app-FONT-22);
+  padding: 30rpx 40rpx;
+  border-bottom: 0.5rpx solid var(--app-LINE-COLOR);
+}
+.scroll-item text{
+  text-shadow:
+    1px 1px 0 #CCC,
+    2px 2px 0 #CCC; /* end of 2 level deep grey shadow */
+}
+.scroll-item image{
+  width: 48rpx;
+  height: 48rpx;
+}
+.text-icon::before{
+  content: '';
+  display: flex;
+  border-top: 2rpx solid;
+  border-right: 2rpx solid;
+  width: 15rpx;
+  height: 15rpx;
+  border-color: #303133;
+  transform: rotate(45deg);
+  transition: transform .3s;
+}

@@ -4,11 +4,18 @@ cloud.init({
   env: cloud.DYNAMIC_CURRENT_ENV
 });
 const db = cloud.database();
+const _ = db.command
+const $ = db.command.aggregate
 
 // 查询数据库集合云函数入口函数
 exports.main = async (event, context) => {
   // 返回数据库查询结果
-  return await db.collection('category-list').where({
-    category: event.category
+  return await db.collection('cook-memus').where({
+    children: _.elemMatch({
+      name: db.RegExp({
+        regexp: event.name,
+        options: 'i'
+      })
+    })
   }).get();
 };

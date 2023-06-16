@@ -1,2 +1,16 @@
 <!--pages/personal/personal.wxml-->
-<text>{{timeline}}打工人</text>
+<view class="info-layout">
+  <image mode="aspectFit" src="cloud://cloud1-0gbl62895c1a16cd.636c-cloud1-0gbl62895c1a16cd-1309406244/老鼠喵.png"></image>
+  <text bindtap="getUserInfo">{{timeline}}-加菲猫</text>
+</view>
+
+<scroll-view scroll-y="true" class="layout-scroll" style="height:{{scrollHeight}}px;">
+  <view class="scroll-item">
+    <text>新增菜品</text>
+    <image src="cloud://cloud1-0gbl62895c1a16cd.636c-cloud1-0gbl62895c1a16cd-1309406244/新增.png" bindtap="addCook"></image>
+  </view>
+  <view class="scroll-item">
+    <text>在线拼图</text>
+    <image src="cloud://cloud1-0gbl62895c1a16cd.636c-cloud1-0gbl62895c1a16cd-1309406244/拼图.png" bindtap="picPuzzle"></image>
+  </view>
+</scroll-view>

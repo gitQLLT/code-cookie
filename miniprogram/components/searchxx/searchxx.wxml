@@ -7,10 +7,10 @@
   </block>
   <block wx:else>
       <input class="input" type="{{type}}" placeholder="{{placeholder}}" value="{{value}}" focus="{{focus}}"
-            model:value="{{value}}" placeholder-class="placeholder"/>
+            model:value="{{value}}" placeholder-class="placeholder" bindinput="searchList"/>
   </block>
 
-  <view class="searchbox layout-center" bindtap="bindSearch">
+  <view class="searchbox layout-center">
     <image class="searchbox-image" src="../../images/ic_search.png"></image>
   </view>
 </view>

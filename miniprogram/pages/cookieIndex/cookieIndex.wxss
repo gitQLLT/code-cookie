@@ -58,10 +58,10 @@ page {
     font-size: var(--app-FONT-13);
     /* border-radius: var(--app-RADIUS-20); */
     margin: 0 20rpx 0 20rpx;
-    padding: 20rpx 20rpx 0 20rpx;
+    padding: 0 20rpx;
 }
 .vtabs-content-subcategory {
-    padding-bottom: 20rpx;
+    padding: 20rpx 0;
 }
 .selected{
   display: block;
